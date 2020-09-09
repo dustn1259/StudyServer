@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var nowMonth=today.getMonth();
+        nowDate=today.getDate();
+        nowDay =today.getDay();
+        var nowYear= today.getFullYear()
+
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write("현재 월:"+ nowMonth, "<br>");
+        document.write("현재 일:"+nowDate,"<br>");
+        document.write("현재 요일:"+nowDay,"<br>");
+
+        var worldcup = new Date(2002,4,31);
+        var theMonth=worldcup.getMonth();
+        var theDate = worldcup.getDate();
+        var theDay = worldcup.getDay();
+
+        document.write("<h1>월드컴 날짜 정보</h1>")
+        document.write("2002월드컴 몇 월" + theMonth,"<br>");
+        document.write("2002월드컴 몇 일" + theDate,"<br>");
+        document.write("2002월드컴 몇 요일" + theDay,"<br>");
+
+        var cal = new Date();
+        var nowYear= cal.getFullYear();
+
+        var theDate = new Date(nowYear,11,31);
+        var diffDate = theDate.getTime() -today.getTime();
+
+        var result = Math.ceil(diffDate/60 * 1000 * 60 * 24);
+        document.write("<h1>오늘부터 연말까지 남은 날짜</h1>")
+        document.write("연말 D-day:"+result+"일 남았습니다.");
+
+    </script>
+
+
+</body>
+</html>
